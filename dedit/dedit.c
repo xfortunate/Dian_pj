@@ -105,7 +105,7 @@ int main (int argc,char *argv[])    //接受输入的额外内容
                 break;
             case CTRL_F:        //开启搜索模式
             {
-                MODE=1;
+                MODE=SEARCH;
                 DrawStatusBar(scmax_y,max_x,y,x,minr,minc,argv[1]);
                 MODE=SetupSearch(scmax_y, max_x);       //输入搜索字串
                 if (MODE==1)
