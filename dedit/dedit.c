@@ -7,6 +7,7 @@
 #include "level_2.3.h"
 #include "level_2.4.h"
 #include "level_3.1.h"
+#include "level_3.2.h"
 int main (int argc,char *argv[])    //接受输入的额外内容
 {
     if (argc<2)
@@ -119,6 +120,11 @@ int main (int argc,char *argv[])    //接受输入的额外内容
                     else
                     snprintf(message,sizeof(message),"Not found: %s",search_word);
                 }
+                break;
+            case CTRL_R:        //开启替换模式
+                MODE=REPLACE;
+                DrawStatusBar(scmax_y,max_x,y,x,minr,minc,argv[1]);
+                StartReplace(buff_p, &y, &x, &minr, &minc, &row, scmax_y, max_x, argv[1], max_y);
                 break;
             }
             case '\n':

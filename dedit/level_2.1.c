@@ -30,7 +30,7 @@ void ScrollSc(char **buff_p,int max_y,int max_x,int minr,int minc,int row)      
         if(length>minc)
         mvaddnstr(i,0,buff_p[i+minr]+minc,min(length-minc,max_x));      //每行绘制
     }
-    if (MODE==1)
+    if (MODE==1||2)
     DrawHighlights(buff_p,max_y,max_x,minr,minc);   //绘制高亮区
 }
 void Adjust(char **buff_p,int *y,int *x,int *minr,int *minc,int max_y,int max_x,int row)        //统一进行窗口坐标纠偏

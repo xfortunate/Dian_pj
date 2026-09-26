@@ -4,9 +4,9 @@ LIBS = -lncurses
 
 TARGET = dedit
 # 注意：不再用 wildcard *.c，因为 dedit.c 和 level_2.5.c 都有 main
-DEDIT_OBJS   = dedit.o level_2.1.o level_2.2.o level_2.3.o level_2.4.o level_3.1.o
+DEDIT_OBJS   = dedit.o level_2.1.o level_2.2.o level_2.3.o level_2.4.o level_3.1.o level_3.2.o
 TEST_TARGET  = test_runner
-TEST_OBJS    = level_2.5.o level_2.1.o level_2.2.o level_2.3.o level_2.4.o level_3.1.o
+TEST_OBJS    = level_2.5.o level_2.1.o level_2.2.o level_2.3.o level_2.4.o level_3.1.o level_3.2.o
 
 all: $(TARGET)
 
